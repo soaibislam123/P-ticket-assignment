@@ -75,7 +75,7 @@
                 </span>
               </h1>
                 <p class="mb-3">Dear passenger we are always available to book your seat at yous destination.Please visit our website and get know our facilities.</p>
-                <button class="btn bg-green-500 border-green-500"><span class="text-xl font-bold">Buy Tickets</span></button>
+                <button class="btn bg-green-500 border-green-500"><a href="#ticket-body"><span class="text-xl font-bold">Buy Tickets</span></a></button>
               </div>
             </div>
           </div>
@@ -117,6 +117,10 @@
 
         </section>
 
+        <div class="my-5 flex justify-center">
+          <button  class="btn btn-outline btn-success">See All Offers</button>
+        </div>
+
 
         <!-- seat info part -->
 
@@ -136,10 +140,10 @@
 
 
 
-          <div class=" bg-white my-5 lg:flex mx-10 rounded-xl">
+          <div class=" bg-white lg:flex mx-10 rounded-xl">
 
            <section class="">
-                <section class="lg:flex gap-16 px-10 py-10 my-10">
+                <section class="lg:flex gap-16 px-10 items-center my-10">
 
                   <div class="lg:flex gap-10">
                     <div>
@@ -154,10 +158,10 @@
 
                   
 
-                  <div>
+                  <div class="my-5">
                     <button class="btn">
                       <span> <img src="images/seat-green.png" alt="" srcset=""></span>
-                      <span class="text-lg text-green-500">40 Seats Left</span></button>
+                      <span class="text-lg text-green-500"><span>12 </span>Seats Left</span></button>
                   </div>
 
 
@@ -165,16 +169,18 @@
 
                 <!-- route info -->
 
-                <section class="bg-slate-200 p-6 rounded-lg mx-10">
+                <section class="bg-slate-200 p-6 my-5 rounded-lg mx-10">
 
-                      <section class="lg:flex justify-between my-4 border-b-2 pb-4 border-gray-400 border-dashed">
+                      <section class="lg:flex justify-between my-4 border-b-2 pb-2 border-gray-400 border-dashed">
                         <div><h1>Route</h1></div>
                         <div><h1>Dhaka-Sylhet</h1></div>
                       </section>
 
                  
 
-                    <section class="lg:flex justify-between my-4 border-b-2 pb-4 border-gray-400 border-dashed">
+                    <!-- destination info -->
+
+                    <section class="lg:flex justify-between my-4 border-b-2 pb-2 border-gray-400 border-dashed">
                       <div><h1>Departure Time</h1></div>
                       <div><h1>9:00 PM</h1></div>
                     </section>
@@ -183,7 +189,7 @@
                           <div class="bg-slate-300 rounded-lg p-3">
                             <h2>Boarding Point-Laxmipur</h2>
                           </div>
-                          <div class="bg-slate-300 rounded-lg p-3">
+                          <div class="bg-slate-300 my-5 lg:my-0 rounded-lg p-3">
                             <h2>Dropping Point-Bogura</h2>
                           </div>
                           <div class="bg-slate-300 rounded-lg p-3">
@@ -203,16 +209,17 @@
 
 
 
-           </section>
-            <div class="rotate-90 lg:-rotate-180  lg:block">
-              <img src="images/info-devider.png" alt="" srcset="">
-            </div>
-            <div class="ml-24 lg:m-auto">
-              <img src="images/fare.png" alt="" srcset="">
-              <h1 class="text-xl font-bold">550 Taka</h1>
-              <p> Per Seat</p>
-            </div>
-          </div>
+          </section>
+
+                  <div class="">
+                    <img src="images/info-devider.png" alt="" srcset="">
+                  </div>
+                  <div class="ml-24 lg:m-auto">
+                    <img src="images/fare.png" alt="" srcset="">
+                    <h1 class="text-xl font-bold">550 Taka</h1>
+                    <p> Per Seat</p>
+                  </div>
+                </div>
 
 
 
@@ -222,12 +229,12 @@
         <!-- seat section -->
 
 
-        <section class="lg:flex gap-52  ">
+        <section id="ticket-body" class="lg:flex gap-52  ">
 
           <!-- seat part -->
 
           <section class="w-full">
-            <div class="border-b-2 border-dashed my-8 pb-3">
+            <div class="border-b-2 border-dashed my-8 text-xl font-bold pb-3">
               <h1>Select Your Seat</h1>
             </div>
 
@@ -299,14 +306,138 @@
           </section>
 
           <!-- calculation part -->
-          <section class="border-s-2 border-dashed w-full ">
-            <h1 class="ml-10">Select Your Seat</h1>
+            <section class="border-s-2 border-dashed w-full ">
+                <div class="ml-10 my-8 pb-3 text-xl font-bold border-b-2 border-dashed">
+                  <h1 class="">Select Your Seat</h1>
+                </div>
 
-          </section>
+                <!-- class part -->
+
+                <section class="bg-slate-200 ml-7 p-8">
+
+                  <div class="overflow-x-auto">
+                    <table class="table">
+                      <!-- head -->
+                      <thead>
+                        <tr class="border-b-2  border-slate-300 border-dashed  ">
+                          
+                          <th class="text-lg font-bold text-black">Seat <span class="bg-green-600 text-white px-2">0</span></th>
+                          <th class="text-lg font-bold text-black">Class</th>
+                          <th class="text-lg font-bold text-black">Price</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- row 1 -->
+                        <tr>
+                          <td>A2</td>
+                          <td>Economy</td>
+                          <td>550</td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr class="border-b-2  border-slate-300 border-dashed ">
+                          <td>A2</td>
+                          <td>Economy</td>
+                          <td>550</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-lg font-bold text-black">Total Price</td>
+                          <td></td>
+                          <td class="text-lg font-bold text-black">BDT 0000</td>
+                        </tr>
+
+                        
+                      <tr class="ml-14">
+                        <td>
+                          <label class="input input-bordered flex items-center gap-2 py-8  ">
+                            <input type="text" class="grow" placeholder="Have Any Coupon" />
+                          <button  class="btn bg-lime-500 text-white px-4">
+                            <span>Apply</span>
+                          </button>
+                          </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                      <td class="text-lg font-bold text-black">Grand Total</td>
+                      <td></td>
+                      <td class="text-lg font-bold text-black">BDT 0000</td>
+                    </tr>
+
+                      
+                      </tbody>
+                    
+                    </table>
+                  </div>
 
 
 
-        </section>
+                  <!-- input field -->
+
+                            <!-- <section>
+                                      <div>
+                                        <label class="form-control w-full max-w-xs">
+                                          <div class="label">
+                                            <span class="label-text text-lg font-bold">Passenger Names <span class="text-xl font-bold">*</span></span>
+                                            
+                                          </div>
+                                          <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full max-w-xs" />
+                                        
+                                        </label>
+                                    </div>
+
+                                  <div>
+                                        <label class="form-control w-full max-w-xs">
+                                          <div class="label">
+                                            <span class="label-text text-lg font-bold">Phone Number <span class="text-xl font-bold">*</span></span>
+                                            
+                                          </div>
+                                          <input type="text" placeholder="Enter Phone Number" class="input input-bordered w-full max-w-xs" />
+                                        
+                                        </label>
+                                  </div>
+
+                                  <div>
+                                        <label class="form-control w-full max-w-xs">
+                                          <div class="label">
+                                            <span class="label-text text-lg font-bold">Email ID</span>
+                                            
+                                          </div>
+                                          <input type="text" placeholder="Enter Your Email" class="input input-bordered w-full max-w-xs" />
+                                        
+                                        </label>
+                                  </div>
+
+
+                              </section>
+
+                            <section> -->
+
+                                <div class="my-6">
+                                  <button class="btn bg-lime-500 lg:w-full">Next</button>
+                                </div>
+
+                              <div class="flex gap-10">
+                                    <label class="label">
+                                      <a href="#" class="label-text-alt link link-hover">Terms and condition</a>
+                                    </label>
+                                    <label class="label">
+                                      <a href="#" class="label-text-alt link link-hover">Cancellation Policy</a>
+                                    </label>
+                              </div>
+
+                            </section>
+
+
+
+                </section>
+            </section>
+
+          
+
+
+
+     </section>
 
 
 
