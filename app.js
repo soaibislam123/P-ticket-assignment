@@ -41,7 +41,7 @@ for(const btn of colorButtons){
 
         setInnerText('grand-total', mainPrice)
         setInnerText('total-price', mainPrice)
-        setInnerText('counted-seat', count)
+        setInnerText('seat-count', count)
 
         
 
