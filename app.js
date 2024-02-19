@@ -59,14 +59,14 @@ function popupBtn(){
 }
 
 
-document.getElementById('copone').addEventListener('keyup', function(e){
+document.getElementById('coupone').addEventListener('keyup', function(e){
   const text = e.target.value;
-  const coponeBtn = document.getElementById('copone-btn')
+  const couponeBtn = document.getElementById('coupone-btn')
   if(text === 'NEW15' || text === 'Couple 20'){
-      coponeBtn.removeAttribute('disabled')
+      couponeBtn.removeAttribute('disabled')
   }
   else{
-      coponeBtn.setAttribute('disabled',true)
+      couponeBtn.setAttribute('disabled',true)
   }
 })
 
@@ -76,10 +76,12 @@ function discount(){
   const convertedGrandTotal = parseInt(grandTotalButton) 
       
  const discount1 =  convertedGrandTotal * 15 /100;
+ const discount2 = convertedGrandTotal  * 20 /100
  const finalGrandTotal = convertedGrandTotal - discount1
- setInnerText('grand-total', finalGrandTotal)
+ const finalGrandTotal2 = convertedGrandTotal - discount2
+ setInnerText('grand-total', finalGrandTotal,finalGrandTotal2)
 
   
-  const coponeContainer = document.getElementById('copone-container')
-  coponeContainer.classList.add('hidden')
+  const coponeSection = document.getElementById('coupone-section')
+  coponeSection.classList.add('hidden')
 }
