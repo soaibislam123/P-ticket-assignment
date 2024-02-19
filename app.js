@@ -22,6 +22,10 @@ for(const btn of colorButtons){
     const convertedtotalSeat =parseInt(countedSeat);
     document.getElementById('seat-amount').innerText = convertedtotalSeat-1;
 
+    const riseSeat = document.getElementById('seat-count').innerText;
+    const convertedriseSeat =parseInt( riseSeat);
+    document.getElementById('seat-count').innerText = convertedriseSeat+1;
+
     const finalPrice = document.getElementById('final-price').innerText;
     const convertedFinalPrice = parseInt(finalPrice)
     const mainPrice =  document.getElementById('final-price').innerText= convertedFinalPrice + ticketPrice
