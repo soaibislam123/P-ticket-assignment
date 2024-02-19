@@ -24,7 +24,7 @@
 
 <body>
 
-  <div class="mx-20">
+  <div id="header" class="mx-20">
 
 
 
@@ -338,7 +338,7 @@
                 <!-- coupon code input field -->
                 <div id="copone-container" class="flex flex-row my-5">
                     <input id="copone" class=" pl-3 flex-grow" type="text" placeholder="Have any copopone?">
-                    <button  id="copone-btn" class="btn bg-green-500 text-white"
+                    <button onclick="discount()" id="copone-btn" class="btn bg-green-500 text-white"
                         disabled>Apply</button>
                 </div>
                 <!-- grand total -->
@@ -348,7 +348,7 @@
                 </div>
             </div>
 
-            <!-- passenger info -->
+            <!-- passenger information -->
             <div class="flex flex-col gap-5 mt-5 px-6">
                 <div class=" flex flex-col gap-4 ">
                     <label class="font-bold" for="Passenger Name">Passenger Name*</label>
@@ -357,9 +357,9 @@
                 </div>
 
                 <div class="flex flex-col gap-4">
-                    <label id="phone-number-input" class="font-bold" for="Phone Number">Phone Nubmer</label>
+                    <label id="phone-number-input" class="font-bold" for="Phone Number">Phone Nubmer*</label>
                     <input class="px-5 py-3 rounded-xl border border-green-400 " type="number"
-                        placeholder="enter your phone number" aria-placeholder="enter you phone number"
+                        placeholder="enter your phone number" aria-placeholder="enter your phone number"oninput="checkPhoneNumber()"
                         >
                 </div>
                 <div class="flex flex-col gap-4">
@@ -367,166 +367,38 @@
                     <input class="px-5 py-3 rounded-lg border border-green-400" type="email"
                         placeholder="Enter Your email id">
                 </div>
-                <button  id="next-btn" class="  btn bg-green-500 text-white"
+                <button onclick="popupBtn()"  id="next-btn" class="  btn bg-green-500 text-white"
                     disabled>Next</button>
             </div>
         </div>
+        
+         
 
           
-            <!-- <section class="border-s-2 border-dashed w-full ">
-                <div class="ml-10 my-8 pb-3 text-xl font-bold border-b-2 border-dashed">
-                  <h1 class="">Select Your Seat</h1>
-                </div>
-
-                 class part -->
-<!-- 
-                <section class="bg-slate-200 ml-7 p-8">
-
-                  <div class="overflow-x-auto">
-                    <table class="table">
-                       head -->
-                      <!-- <thead>
-                        <tr class="border-b-2  border-slate-300 border-dashed  ">
-                          
-                          <th class="text-lg font-bold text-black">Seat <span class="bg-green-600 text-white px-2">0</span></th>
-                          <th class="text-lg font-bold text-black">Class</th>
-                          <th class="text-lg font-bold text-black">Price</th>
-                        </tr>
-                      </thead>
-                      <tbody> -->
-                        <!-- row 1 -->
-                        <!-- <tr>
-                          <td>A2</td>
-                          <td>Economy</td>
-                          <td>550</td>
-                        </tr>
-                         row 2 -->
-                        <!-- <tr class="border-b-2  border-slate-300 border-dashed ">
-                          <td>A2</td>
-                          <td>Economy</td>
-                          <td>550</td>
-                        </tr> -->
-
-                        <!-- <tr>
-                          <td class="text-lg font-bold text-black">Total Price</td>
-                          <td></td>
-                          <td class="text-lg font-bold text-black">BDT 00</td>
-                        </tr> -->
-
-<!--                         
-                      <tr class="ml-14">
-                        <td>
-                          <label class="input input-bordered flex items-center gap-2 py-8  ">
-                            <input type="text" class="grow" placeholder="Have Any Coupon" />
-                          <button  class="btn bg-lime-500 text-white px-4">
-                            <span>Apply</span>
-                          </button>
-                          </label>
-                        </td>
-                    </tr> -->
-<!-- 
-                    <tr>
-                      <td class="text-lg font-bold text-black">Grand Total</td>
-                      <td></td>
-                      <td class="text-lg font-bold text-black">BDT 00</td>
-                    </tr>
-
-                      
-                      </tbody>
-                    
-                    </table>
-                  </div> -->
-
-
-
-                  <!-- input field -->
-
-                            <!-- <section>
-                                      <div>
-                                        <label class="form-control w-full max-w-xs">
-                                          <div class="label">
-                                            <span class="label-text text-lg font-bold">Passenger Names <span class="text-xl font-bold">*</span></span>
-                                            
-                                          </div>
-                                          <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full max-w-xs" />
-                                        
-                                        </label>
-                                    </div>
-
-                                  <div>
-                                        <label class="form-control w-full max-w-xs">
-                                          <div class="label">
-                                            <span class="label-text text-lg font-bold">Phone Number <span class="text-xl font-bold">*</span></span>
-                                            
-                                          </div>
-                                          <input type="text" placeholder="Enter Phone Number" class="input input-bordered w-full max-w-xs" />
-                                        
-                                        </label>
-                                  </div>
-
-                                  <div>
-                                        <label class="form-control w-full max-w-xs">
-                                          <div class="label">
-                                            <span class="label-text text-lg font-bold">Email ID</span>
-                                            
-                                          </div>
-                                          <input type="text" placeholder="Enter Your Email" class="input input-bordered w-full max-w-xs" />
-                                        
-                                        </label>
-                                  </div>
-
-
-                              </section>
-
-                            <section> -->
-
-                                <!-- <div class="my-6">
-                                  <button class="btn bg-lime-500 lg:w-full">Next</button>
-                                </div>
-
-                              <div class="flex gap-10">
-                                    <label class="label">
-                                      <a href="#" class="label-text-alt link link-hover">Terms and condition</a>
-                                    </label>
-                                    <label class="label">
-                                      <a href="#" class="label-text-alt link link-hover">Cancellation Policy</a>
-                                    </label>
-                              </div>
-
-                            </section> -->
-
-
-<!-- 
-                </section>
-            </section> -->
-
-          
-
-
-
      </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </div>
+
+  <!-- popup section -->
+
+        <section id="popup-section" class="hidden bg-[#F7F8F8] w-screen h-screen  justify-center items-center">
+          <div
+              class="container mx-auto flex flex-col justify-center items-center gap-7 bg-[#FFF] w-[700px]  p-12 py-14  border border-green-400">
+              <img src="./images/success.png" alt="">
+
+              <h1 class=" text-2xl text-green-500">Success</h1>
+
+              <div class="flex flex-col justify-center items-center gap-5 ">
+                  <p class="font-bold text-center">Thank you for Booking Our Bus Seats. <br> We are working hard to
+                      find the best
+                      service and deals for you. </p>
+
+                  <p>Shortly you will find a confirmation in your email</p>
+              </div>
+
+              <button id="success-btn" class="btn bg-green-400">continue</button>
+          </div>
+      </section>
   <script src="utility.js"></script>
  <script src="app.js"></script>
 </body>
