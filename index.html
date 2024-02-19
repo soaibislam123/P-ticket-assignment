@@ -75,7 +75,8 @@
                 </span>
               </h1>
                 <p class="mb-3">Dear passenger we are always available to book your seat at yous destination.Please visit our website and get know our facilities.</p>
-                <button class="btn bg-green-500 border-green-500"><a href="#ticket-body"><span class="text-xl font-bold">Buy Tickets</span></a></button>
+                <button  class="btn bg-green-500 border-green-500"><a href="#ticket-body"><span class="text-xl font-bold">Buy Tickets</span></a></button>
+                
               </div>
             </div>
           </div>
@@ -161,7 +162,7 @@
                   <div class="my-5">
                     <button class="btn">
                       <span> <img src="images/seat-green.png" alt="" srcset=""></span>
-                      <span class="text-lg text-green-500"><span>12 </span>Seats Left</span></button>
+                      <span class="text-lg text-green-500"><span id="seat-amount">12 </span>Seats Left</span></button>
                   </div>
 
 
@@ -229,7 +230,7 @@
         <!-- seat section -->
 
 
-        <section id="ticket-body" class="lg:flex gap-52  ">
+        <section id="ticket-body" class="lg:flex gap-52 tickets ">
 
           <!-- seat part -->
 
@@ -261,14 +262,14 @@
              <section class="flex justify-between my-8 items-center">
                 <div class="flex gap-4 items-center">
                   <h1>A</h1>
-                  <button class="btn">A1</button>
-                  <button class="btn">A2</button>
+                  <button  class="btn add-btn">A1</button>
+                  <button  class="btn add-btn">A2</button>
                 </div>
 
                 <div class="flex items-center gap-4">
 
-                  <button class="btn">A3</button>
-                  <button class="btn">A4</button>
+                  <button   class="btn add-btn ">A3</button>
+                  <button   class="btn add-btn ">A4</button>
 
                 </div>
              </section>
@@ -276,14 +277,14 @@
              <section class="flex justify-between my-8 items-center">
               <div class="flex gap-4 items-center">
                 <h1>B</h1>
-                <button class="btn">B1</button>
-                <button class="btn">B2</button>
+                <button class="btn add-btn ">B1</button>
+                <button class="btn add-btn ">B2</button>
               </div>
 
               <div class="flex items-center gap-4">
 
-                <button class="btn">B3</button>
-                <button class="btn">B4</button>
+                <button  class="btn add-btn ">B3</button>
+                <button  class="btn add-btn">B4</button>
 
               </div>
            </section>
@@ -291,34 +292,100 @@
              <section class="flex justify-between my-8 items-center">
               <div class="flex gap-4 items-center">
                 <h1>C</h1>
-                <button class="btn">C1</button>
-                <button class="btn">C2</button>
+                <button class="btn add-btn">C1</button>
+                <button  class="btn add-btn">C2</button>
               </div>
 
-              <div class="flex items-center gap-4">
+              <div class="flex items-center gap-4 ">
 
-                <button class="btn">C3</button>
-                <button class="btn">C4</button>
+                <button  class="btn add-btn">C3</button>
+                <button class="btn add-btn">C4</button>
 
               </div>
            </section>
 
           </section>
 
-          <!-- calculation part -->
-            <section class="border-s-2 border-dashed w-full ">
+
+          <!-- input field -->
+          <div class="flex-grow-0 lg:flex-grow ">
+            <div class="border-b-2 border-dashed my-8 text-xl font-bold pb-3">
+              <h1 class="font-bold pl-6">Select Your Seat</h1>
+            </div>
+            
+            <div class="bg-[#F7F8F8] px-5 py-8">
+                <div class="flex gap-4 justify-between ">
+                    <!-- set number -->
+                    <div id="list-seat">
+                        <p>Seat <span id="seat-count" class="text-green-400"> 0</span></p>
+                    </div>
+                    <!-- class -->
+                    <div id="title-class">
+                        <h1 class="font-bold">Class</h1>
+                    </div>
+                    <!-- price -->
+                    <div id="prices">
+                        <h1 class="font-bold">price</h1>
+                    </div>
+                </div>
+                <hr><br>
+                <!-- total cost -->
+                <div class="flex justify-between border-green-400">
+                    <h1 class="font-bold">Total Price</h1>
+                    <h1 class="font-bold">BDT: <span id="final-price"> 0</span></h1>
+                </div>
+
+                <!-- coupon code input field -->
+                <div id="copone-container" class="flex flex-row my-5">
+                    <input id="copone" class=" pl-3 flex-grow" type="text" placeholder="Have any copopone?">
+                    <button  id="copone-btn" class="btn bg-green-500 text-white"
+                        disabled>Apply</button>
+                </div>
+                <!-- grand total -->
+                <div class="flex justify-between mb-8">
+                    <h1 class="font-bold">Grand Total</h1>
+                    <h1 class="font-bold">BDT: <span id="grand-total" class="grand"> 0</span></h1>
+                </div>
+            </div>
+
+            <!-- passenger info -->
+            <div class="flex flex-col gap-5 mt-5 px-6">
+                <div class=" flex flex-col gap-4 ">
+                    <label class="font-bold" for="Passenger Name">Passenger Name*</label>
+                    <input id="name-input" class=" px-5 py-3 rounded-xl flex-grow-0 lg:flex-grow border border-green-400"
+                        type="text" placeholder="enter your name here">
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <label id="phone-number-input" class="font-bold" for="Phone Number">Phone Nubmer</label>
+                    <input class="px-5 py-3 rounded-xl border border-green-400 " type="number"
+                        placeholder="enter your phone number" aria-placeholder="enter you phone number"
+                        >
+                </div>
+                <div class="flex flex-col gap-4">
+                    <label class="font-bold" for="email">Email ID</label>
+                    <input class="px-5 py-3 rounded-lg border border-green-400" type="email"
+                        placeholder="Enter Your email id">
+                </div>
+                <button  id="next-btn" class="  btn bg-green-500 text-white"
+                    disabled>Next</button>
+            </div>
+        </div>
+
+          
+            <!-- <section class="border-s-2 border-dashed w-full ">
                 <div class="ml-10 my-8 pb-3 text-xl font-bold border-b-2 border-dashed">
                   <h1 class="">Select Your Seat</h1>
                 </div>
 
-                <!-- class part -->
-
+                 class part -->
+<!-- 
                 <section class="bg-slate-200 ml-7 p-8">
 
                   <div class="overflow-x-auto">
                     <table class="table">
-                      <!-- head -->
-                      <thead>
+                       head -->
+                      <!-- <thead>
                         <tr class="border-b-2  border-slate-300 border-dashed  ">
                           
                           <th class="text-lg font-bold text-black">Seat <span class="bg-green-600 text-white px-2">0</span></th>
@@ -326,27 +393,27 @@
                           <th class="text-lg font-bold text-black">Price</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody> -->
                         <!-- row 1 -->
-                        <tr>
+                        <!-- <tr>
                           <td>A2</td>
                           <td>Economy</td>
                           <td>550</td>
                         </tr>
-                        <!-- row 2 -->
-                        <tr class="border-b-2  border-slate-300 border-dashed ">
+                         row 2 -->
+                        <!-- <tr class="border-b-2  border-slate-300 border-dashed ">
                           <td>A2</td>
                           <td>Economy</td>
                           <td>550</td>
-                        </tr>
+                        </tr> -->
 
-                        <tr>
+                        <!-- <tr>
                           <td class="text-lg font-bold text-black">Total Price</td>
                           <td></td>
-                          <td class="text-lg font-bold text-black">BDT 0000</td>
-                        </tr>
+                          <td class="text-lg font-bold text-black">BDT 00</td>
+                        </tr> -->
 
-                        
+<!--                         
                       <tr class="ml-14">
                         <td>
                           <label class="input input-bordered flex items-center gap-2 py-8  ">
@@ -356,19 +423,19 @@
                           </button>
                           </label>
                         </td>
-                    </tr>
-
+                    </tr> -->
+<!-- 
                     <tr>
                       <td class="text-lg font-bold text-black">Grand Total</td>
                       <td></td>
-                      <td class="text-lg font-bold text-black">BDT 0000</td>
+                      <td class="text-lg font-bold text-black">BDT 00</td>
                     </tr>
 
                       
                       </tbody>
                     
                     </table>
-                  </div>
+                  </div> -->
 
 
 
@@ -413,7 +480,7 @@
 
                             <section> -->
 
-                                <div class="my-6">
+                                <!-- <div class="my-6">
                                   <button class="btn bg-lime-500 lg:w-full">Next</button>
                                 </div>
 
@@ -426,12 +493,12 @@
                                     </label>
                               </div>
 
-                            </section>
+                            </section> -->
 
 
-
+<!-- 
                 </section>
-            </section>
+            </section> -->
 
           
 
@@ -460,7 +527,7 @@
 
 
   </div>
-  
+  <script src="utility.js"></script>
  <script src="app.js"></script>
 </body>
 </html>
